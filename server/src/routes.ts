@@ -27,6 +27,6 @@ routes.post('/feedbacks', async (req, res) => {
   } catch (error) {
     console.log(error);
     
-    res.status(500).send();
+    res.status(500).send(error);
   }
 });

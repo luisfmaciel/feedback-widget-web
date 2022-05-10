@@ -32,7 +32,7 @@ export function FeedbackContentStep({
       type: feedbackType,
       comment,
       screenshot,
-    }).catch(err => {console.log(err)});
+    });
     
     setIsLoadingFeedback(false);
     onFeedbackSent()

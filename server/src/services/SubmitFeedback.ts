@@ -1,4 +1,4 @@
-import { MailAdapter } from "../adapters/mailAdapter";
+import { MailAdapter } from "../adapters/MailAdapter";
 import { FeedbacksRepository } from "../repositories/FeedbacksRepository";
 
 interface SubmitFeedbackRequest {

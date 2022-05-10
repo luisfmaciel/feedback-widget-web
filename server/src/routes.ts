@@ -9,6 +9,8 @@ routes.post('/feedbacks', async (req, res) => {
   const { type, comment, screenshot } = req.body;
 
   try {
+    console.log({ type, comment, screenshot });
+    
     const prismaFeedbacksRepository = new PrismaFeedbacksRepository(); 
     const nodemailerMailAdapter = new NodemailerMailAdapter();
   
@@ -16,12 +18,15 @@ routes.post('/feedbacks', async (req, res) => {
       prismaFeedbacksRepository,
       nodemailerMailAdapter  
     );
-  
+    
+    console.log('entrou');
+    
     await submitFeedback.execute({
       type,
       comment,
       screenshot,
     });
+    console.log('saiu');
   
     res.status(201).send();
   } catch (error) {

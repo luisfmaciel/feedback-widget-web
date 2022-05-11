@@ -6,7 +6,7 @@ const app = express();
 const port = 3333;
 
 app.use(cors({
-  "methods": "POST"
+  origin: "*"
 }));
 app.use(express.json());
 app.use(routes)

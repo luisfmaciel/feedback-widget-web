@@ -63,7 +63,7 @@ export function WidgetForm() {
       ) }
 
       <footer className="text-xs text-neutral-400">
-        Feito com ♥ por <a className="underline underline-offset-2" href="https://www.linkedin.com/in/luis-felipe-maciel/">Luis Maciel</a>  
+        Feito com ♥ por <a className="underline underline-offset-2" href="https://www.linkedin.com/in/luis-felipe-maciel/">devluismaciel</a>  
       </footer>
     </div>
   );

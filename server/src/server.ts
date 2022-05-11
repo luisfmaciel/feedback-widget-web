@@ -5,8 +5,13 @@ import cors from "cors";
 const app = express();
 const port = 3333;
 
-app.use(cors());
 app.use(express.json());
+app.use(cors({
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "allowedHeaders": ['Content-Type', 'Authorization'],
+  "maxAge": 10,
+}));
 app.use(routes)
 
 app.listen(process.env.PORT || port, () => {

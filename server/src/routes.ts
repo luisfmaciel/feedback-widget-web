@@ -1,9 +1,9 @@
-import { Router } from 'express';
+import express from 'express';
 import { PrismaFeedbacksRepository } from './repositories/prisma/PrismaFeedbacksRepository';
 import { NodemailerMailAdapter } from './adapters/nodemailer/NodemailerMailAdapter';
 import { SubmitFeedback } from './services/SubmitFeedback';
 
-export const routes = Router();
+export const routes = express.Router();
 
 routes.post('/feedbacks', async (req, res) => {
   const { type, comment, screenshot } = req.body;

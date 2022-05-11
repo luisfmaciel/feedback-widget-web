@@ -5,7 +5,9 @@ import { routes } from './routes';
 const app = express();
 const port = 3333;
 
-app.use(cors());
+app.use(cors({
+  "methods": "POST"
+}));
 app.use(express.json());
 app.use(routes)
 
